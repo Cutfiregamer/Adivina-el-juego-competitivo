@@ -1,0 +1,32 @@
+Algoritmo sin_titulo
+	definir eleccion, turno, valr Como Entero
+	turno=1
+	valr=Aleatorio(1,100)
+	mientras eleccion<>valr
+		si turno=1 Entonces
+			escribir "Jugador 1 intente adivinar"
+		SiNo
+			escribir "Jugador 2 intente adivinar"
+		FinSi
+		leer eleccion
+		si eleccion<valr Entonces
+			escribir "mayor"
+		FinSi
+		si eleccion>valr Entonces
+			escribir "menor"
+		FinSi
+		si eleccion<>valr y turno==1 Entonces
+			turno=2
+		SiNo
+			si eleccion<>valr y turno==2 Entonces
+				turno=1
+			FinSi
+		FinSi
+	FinMientras
+	escribir "Correcto"
+	si turno==1 entonces
+		escribir "J1 gana"
+	SiNo
+		escribir "J2 gana"
+	FinSi
+FinAlgoritmo
